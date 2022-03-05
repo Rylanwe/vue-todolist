@@ -1,9 +1,13 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
+
 * {
   box-sizing: border-box;
 }
 
-body {
+body,
+h1 {
   margin: 0;
+  padding: 0;
 }
 
 ul {
@@ -17,6 +21,16 @@ li {
 
 a {
   text-decoration: none;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 

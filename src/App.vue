@@ -1,10 +1,8 @@
 <template>
   <div id="app">
     <TodoHeader></TodoHeader>
-    <main>
-      <TodoInput></TodoInput>
-      <TodoItem></TodoItem>
-    </main>
+    <TodoInput></TodoInput>
+    <TodoItem></TodoItem>
     <TodoFooter></TodoFooter>
   </div>
 </template>
@@ -27,5 +25,12 @@ export default {
 </script>
 
 <style>
-
+#app {
+  overflow: hidden;
+  margin: 50px auto;
+  border: 1px solid #2f2f2f;
+  border-radius: 20px;
+  max-width: 450px;
+  height: 500px;
+}
 </style>

@@ -1,17 +1,40 @@
 <template>
   <div class="wrap">
     <div class="input-bd">
-      <input type="text" class="input" placeholder="请输入待办项">
+      <input
+        type="text"
+        class="input"
+        v-model="text"
+        @keyup.enter="addTodo"
+        placeholder="请输入待办项"
+      />
     </div>
     <div class="btn-bd">
-      <button class="btn">添加项目</button>
+      <button class="btn" @click="addTodo">添加项目</button>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'TodoInput'
+  name: 'TodoInput',
+  data() {
+    return {
+      text: "",
+      isChecked: false
+    }
+  },
+  methods: {
+    addTodo() {
+      if (this.text !== "") {
+        this.$emit("addTodo", this.text.trim(), this.isChecked);
+        this.clearInput();
+      }
+    },
+    clearInput() {
+      this.text = "";
+    }
+  }
 }
 </script>
 
